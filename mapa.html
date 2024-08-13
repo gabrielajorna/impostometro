@@ -4,13 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mapa Interativo</title>
-    <link rel="stylesheet" href="mapa.css"> 
-    <script src="mapa.js" defer></script>
-    <script src="https://d3js.org/d3.v7.min.js"></script> 
+    <link rel="stylesheet" href="mapateste.css">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
   </head>
   <body>
     <div id="tooltip" class="tooltip"></div>
-
     <p id="info">…</p>
     <svg
       xmlns:svg="http://www.w3.org/2000/svg"
@@ -21,7 +19,7 @@
       id="svg2"
       version="1.1"
     >
-   <!-- Elementos do mapa, contorno das regiões -->
+      <!-- Elementos do mapa, contorno das regiões -->
       <g 
         id="g7153"
         transform="matrix(13.318666,0,0,13.491116,-2717996.9,-1629784.7)"
@@ -33,373 +31,26 @@
           stroke-dasharray: none;
         "
       >
-        <path
-          id="mun_3513801"
-          class="map-region"
-          d="m 205262,125950 353,-147 660,-512 -247,-118 -318,-418 229,-982 305,-74 69,94 193,266 213,-202 144,17 -95,243 264,182 397,-160 -4,556 -287,277 -78,240 -451,404 -62,430 -123,106 -272,73 -892,-275 2,0 z"
-          style="
-            fill: #b3b3b3;
-            fill-opacity: 1;
-            stroke: #000000;
-            stroke-width: 10.52705574;
-            stroke-linecap: round;
-            stroke-linejoin: round;
-            stroke-miterlimit: 4;
-            stroke-opacity: 1;
-            stroke-dasharray: none;
-          "
-          
-        />
-        <path
-          id="mun_3529401"
-          class="map-region"
-          d="m 210264,122661 171,17 376,448 638,119 541,-95 44,-103 250,239 461,-374 7,-260 290,-160 79,-203 373,175 -269,285 -250,581 331,782 -211,-13 -277,149 -259,270 -447,-194 -658,736 -358,141 -451,385 -176,1 -87,-217 -237,-43 13,-376 326,-562 -207,-449 -326,-138 -21,-129 221,-189 268,-51 -240,-318 85,-454 0,0 z"
-          
-          style="
-            fill: #37c837;
-            stroke: #000000;
-            stroke-width: 10.52705574;
-            stroke-linecap: round;
-            stroke-linejoin: round;
-            stroke-miterlimit: 4;
-            stroke-opacity: 1;
-            stroke-dasharray: none;
-          "
-        />
-        <path
-          id="mun_3543303"
-          class="map-region"
-          d="m 210646,125586 451,-385 358,-141 658,-736 447,194 259,-270 277,-149 211,13 -331,-782 250,-581 268,-285 295,781 337,-30 200,-127 61,84 45,220 -136,435 43,167 185,66 409,418 201,772 -143,-81 -25,214 -147,117 -314,36 -375,-106 -69,-171 -311,88 -307,-65 86,229 -95,216 -367,5 -145,223 -433,144 -165,475 85,240 -293,93 -34,138 -590,126 -238,-64 -106,-110 149,-211 -524,-546 55,-439 -184,-215 2,0 z"
-          
-          style="
-            fill: #ff5555;
-            stroke: #000000;
-            stroke-width: 10.52705574;
-            stroke-linecap: round;
-            stroke-linejoin: round;
-            stroke-miterlimit: 4;
-            stroke-opacity: 1;
-            stroke-dasharray: none;
-          "
-        />
-        <path
-          id="mun_3544103"
-          class="map-region"
-          d="m 212084,127045 34,-138 293,-93 -85,-240 165,-475 433,-144 146,-223 366,-5 95,-216 -86,-229 307,65 311,-88 69,171 375,106 314,-36 147,-117 26,-214 142,81 69,-169 138,33 -117,776 -249,-75 -267,357 -182,-45 -309,132 -45,312 -340,54 -135,216 -545,281 -638,44 -330,133 -100,-254 -2,0 z"
-          
-          style="
-            fill: #ff80b2;
-            stroke: #000000;
-            stroke-width: 10.52705574;
-            stroke-linecap: round;
-            stroke-linejoin: round;
-            stroke-miterlimit: 4;
-            stroke-opacity: 1;
-            stroke-dasharray: none;
-          "
-        />
-        <path
-          id="mun_3547809"
-          class="map-region"
-          d="m 207818,123436 195,-132 124,129 122,-195 47,-328 173,-239 -167,-245 153,-68 -81,-256 395,237 380,16 567,363 538,-57 -85,454 241,318 -268,51 -221,189 21,129 325,138 207,449 -325,562 -14,376 237,43 87,217 177,-1 184,215 -56,439 524,546 -149,211 106,110 238,64 591,-126 100,254 330,-133 638,-44 545,-281 135,-216 340,-54 45,-312 309,-132 182,45 266,-357 250,75 324,265 -103,241 161,-6 283,210 334,-68 527,653 -557,538 -201,12 -556,463 0,-537 -502,-135 -546,308 -619,14 -138,418 -500,282 -73,-63 -454,93 -539,-105 -111,-108 61,-220 -508,-120 -1575,-1565 -265,-95 -473,187 -179,-68 301,-186 -81,-203 95,-400 -143,-226 150,-306 -485,-140 -209,-399 -461,-149 26,-523 -392,-517 2,1 z"
-          
-          style="
-            fill: #0066ff;
-            stroke: #000000;
-            stroke-width: 10.52705574;
-            stroke-linecap: round;
-            stroke-linejoin: round;
-            stroke-miterlimit: 4;
-            stroke-opacity: 1;
-            stroke-dasharray: none;
-          "
-        />
-        <path
-          id="mun_3548708"
-          class="map-region"
-          d="m 205262,125950 891,275 272,-73 124,-106 62,-431 450,-403 79,-241 286,-277 4,-556 -397,160 -264,-181 95,-243 -144,-17 -212,201 -194,-265 639,-292 336,-318 265,278 264,-26 392,517 -26,523 461,149 209,399 485,140 -150,306 143,226 -95,400 81,203 -301,186 179,68 473,-187 265,95 1575,1565 508,120 -61,220 111,108 539,105 -503,320 -238,-20 -256,154 123,83 -107,291 172,42 -191,221 -328,121 -160,312 -178,-108 -117,363 -437,424 -73,-77 -328,475 -168,146 -596,57 -421,505 -429,246 -122,329 -198,186 -246,98 -67,-88 -96,192 -497,287 -732,181 148,-346 -122,-228 123,-156 -296,-361 118,-87 122,-462 -260,-1011 7,-620 -481,-330 -49,-306 116,-569 202,-377 120,-684 -364,-671 -468,-466 -157,-627 90,-69 0,2 z"
-          style="
-            fill: #aaccff;
-            stroke: #000000;
-            stroke-width: 10.52705574;
-            stroke-linecap: round;
-            stroke-linejoin: round;
-            stroke-miterlimit: 4;
-            stroke-opacity: 1;
-            stroke-dasharray: none;
-          "
-        />
-        <path
-          id="mun_3548807"
-          class="map-region"
-          d="m 207289,123185 115,-1297 634,352 347,-138 81,256 -153,68 167,245 -173,239 -47,328 -122,195 -124,-129 -196,132 -264,27 -265,-278 z"
-          style="
-            fill: #ffcc00;
-            stroke: #000000;
-            stroke-width: 10.52705574;
-            stroke-linecap: round;
-            stroke-linejoin: round;
-            stroke-miterlimit: 4;
-            stroke-opacity: 1;
-            stroke-dasharray: none;
-          "
-        />
+        <!-- Regiões -->
+        <path id="mun_3513801" class="map-region" d="m 205262,125950 353,-147 660,-512 -247,-118 -318,-418 229,-982 305,-74 69,94 193,266 213,-202 144,17 -95,243 264,182 397,-160 -4,556 -287,277 -78,240 -451,404 -62,430 -123,106 -272,73 -892,-275 2,0 z"/>
+        <path id="mun_3529401" class="map-region" d="m 210264,122661 171,17 376,448 638,119 541,-95 44,-103 250,239 461,-374 7,-260 290,-160 79,-203 373,175 -269,285 -250,581 331,782 -211,-13 -277,149 -259,270 -447,-194 -658,736 -358,141 -451,385 -176,1 -87,-217 -237,-43 13,-376 326,-562 -207,-449 -326,-138 -21,-129 221,-189 268,-51 -240,-318 85,-454 0,0 z"/>
+        <path id="mun_3543303" class="map-region" d="m 210646,125586 451,-385 358,-141 658,-736 447,194 259,-270 277,-149 211,13 -331,-782 250,-581 268,-285 295,781 337,-30 200,-127 61,84 45,220 -136,435 43,167 185,66 409,418 201,772 -143,-81 -25,214 -147,117 -314,36 -375,-106 -69,-171 -311,88 -307,-65 86,229 -95,216 -367,5 -145,223 -433,144 -165,475 85,240 -293,93 -34,138 -590,126 -238,-64 -106,-110 149,-211 -524,-546 55,-439 -184,-215 2,0 z"/>
+        <path id="mun_3544103" class="map-region" d="m 212084,127045 34,-138 293,-93 -85,-240 165,-475 433,-144 146,-223 366,-5 95,-216 -86,-229 307,65 311,-88 69,171 375,106 314,-36 147,-117 26,-214 142,81 69,-169 138,33 -117,776 -249,-75 -267,357 -182,-45 -309,132 -45,312 -340,54 -135,216 -545,281 -638,44 -330,133 -100,-254 -2,0 z"/>
+        <path id="mun_3547809" class="map-region" d="m 207818,123436 195,-132 124,129 122,-195 47,-328 173,-239 -167,-245 153,-68 -81,-256 395,237 380,16 567,363 538,-57 -85,454 241,318 -268,51 -221,189 21,129 325,138 207,449 -325,562 -14,376 237,43 87,217 177,-1 184,215 -56,439 524,546 -149,211 106,110 238,64 591,-126 100,254 330,-133 638,-44 545,-281 135,-216 340,-54 45,-312 309,-132 182,45 266,-357 250,75 324,265 -103,241 161,-6 283,210 334,-68 527,653 -557,538 -201,12 -556,463 0,-537 -502,-135 -546,308 -619,14 -138,418 -500,282 -73,-63 -454,93 -539,-105 -111,-108 61,-220 -508,-120 -1575,-1565 -265,-95 -473,187 -179,-68 301,-186 -81,-203 95,-400 -143,-226 150,-306 -485,-140 -209,-399 -461,-149 26,-523 -392,-517 2,1 z"/>
+        <path id="mun_3548708" class="map-region" d="m 205262,125950 891,275 272,-73 124,-106 62,-431 450,-403 79,-241 286,-277 4,-556 -397,160 -264,-181 95,-243 -144,-17 -212,201 -194,-265 639,-292 336,-318 265,278 264,-26 392,517 -26,523 461,149 209,399 485,140 -150,306 143,226 -95,400 81,203 -301,186 179,68 473,-187 265,95 1575,1565 508,120 -61,220 111,108 539,105 -503,320 -238,-20 -256,154 123,83 -107,291 172,42 -191,221 -328,121 -160,312 -178,-108 -117,363 -437,424 -73,-77 -328,475 -168,146 -596,57 -421,505 -429,246 -122,329 -198,186 -246,98 -67,-88 -96,192 -497,287 -732,181 148,-346 -122,-228 123,-156 -296,-361 118,-87 122,-462 -260,-1011 7,-620 -481,-330 -49,-306 116,-569 202,-377 120,-684 -364,-671 -468,-466 -157,-627 90,-69 0,2 z"/>
+        <path id="mun_3548807" class="map-region" d="m 207289,123185 115,-1297 634,352 347,-138 81,256 -153,68 167,245 -173,239 -47,328 -122,195 -124,-129 -196,132 -264,27 -265,-278 z"/>
       </g>
-
-      <text
-        xml:space="preserve"
-        style="
-          font-size: 8466.66699219px;
-          font-style: normal;
-          font-weight: normal;
-          line-height: 125%;
-          letter-spacing: 0px;
-          word-spacing: 0px;
-          fill: #000000;
-          fill-opacity: 1;
-          stroke: none;
-          font-family: Sans;
-        "
-        x="10079.365"
-        y="54428.566"
-        id="text7670"
-       
-      >
-        <tspan
-          
-          id="tspan7672"
-          x="10079.365"
-          y="54428.566"
-          style="font-size: 5644.44461538px"
-        >
-          Diadema
-        </tspan>
-      </text>
-      <text
-        xml:space="preserve"
-        style="
-          font-size: 8466.66699219px;
-          font-style: normal;
-          font-weight: normal;
-          text-align: center;
-          line-height: 125%;
-          letter-spacing: 0px;
-          word-spacing: 0px;
-          text-anchor: middle;
-          fill: #000000;
-          fill-opacity: 1;
-          stroke: none;
-          font-family: Sans;
-        "
-        x="58152.625"
-        y="95350.789"
-        id="text7674"
-        
-      >
-        <tspan
-          
-          id="tspan7676"
-          x="58152.625"
-          y="95350.789"
-          style="font-size: 5644.44461538px"
-        >
-          São Bernardo
-        </tspan>
-        <tspan
-          
-          x="58152.625"
-          y="105934.12"
-          id="tspan7678"
-          style="font-size: 5644.44461538px"
-        >
-          do Campo
-        </tspan>
-      </text>
-      <text
-        xml:space="preserve"
-        style="
-          font-size: 8466.66699219px;
-          font-style: normal;
-          font-weight: normal;
-          text-align: center;
-          line-height: 125%;
-          letter-spacing: 0px;
-          word-spacing: 0px;
-          text-anchor: middle;
-          fill: #000000;
-          fill-opacity: 1;
-          stroke: none;
-          font-family: Sans;
-        "
-        x="45689.777"
-        y="23720.102"
-        id="text7680"
-        
-      >
-        <tspan
-        
-          id="tspan7682"
-          x="45689.777"
-          y="23720.102"
-          style="font-size: 5644.44482422px"
-        >
-          São Caetano
-        </tspan>
-        <tspan
-          
-          x="45689.777"
-          y="30775.658"
-          id="tspan7684"
-          style="font-size: 5644.44482422px"
-        >
-          do Sul
-        </tspan>
-      </text>
-      <text
-        xml:space="preserve"
-        style="
-          font-size: 7055.55566406px;
-          font-style: normal;
-          font-weight: normal;
-          text-align: center;
-          line-height: 125%;
-          letter-spacing: 0px;
-          word-spacing: 0px;
-          text-anchor: middle;
-          fill: #000000;
-          fill-opacity: 1;
-          stroke: none;
-          font-family: Sans;
-        "
-        x="68741.266"
-        y="34471.418"
-        id="text7686"
-        
-      >
-        <tspan
-          
-          id="tspan7688"
-          x="68741.266"
-          y="34471.418"
-          style="font-size: 5644.44482422px"
-        >
-          Santo
-        </tspan>
-        <tspan
-          
-          x="68741.266"
-          y="41526.973"
-          style="font-size: 5644.44482422px"
-          id="tspan7708"
-        >
-          André
-        </tspan>
-      </text>
-      <text
-        xml:space="preserve"
-        style="
-          font-size: 25px;
-          font-style: normal;
-          font-weight: normal;
-          text-align: center;
-          line-height: 125%;
-          letter-spacing: 0px;
-          word-spacing: 0px;
-          text-anchor: middle;
-          fill: #000000;
-          fill-opacity: 1;
-          stroke: none;
-          font-family: Sans;
-        "
-        x="343.57144"
-        y="150"
-        id="text7690"
-        transform="matrix(282.22223,0,0,282.22223,0,-0.005)"
-      >
-        <tspan
-        
-          id="tspan7692"
-          x="343.57144"
-          y="150"
-          style="font-size: 20.00000005px"
-        >
-          Mauá
-        </tspan>
-      </text>
-      <text
-        xml:space="preserve"
-        style="
-          font-size: 7055.55566406px;
-          font-style: normal;
-          font-weight: normal;
-          text-align: center;
-          line-height: 125%;
-          letter-spacing: 0px;
-          word-spacing: 0px;
-          text-anchor: middle;
-          fill: #000000;
-          fill-opacity: 1;
-          stroke: none;
-          font-family: Sans;
-        "
-        x="116517.47"
-        y="56242.852"
-        id="text7694"
-      >
-        <tspan
-          id="tspan7696"
-          x="116517.47"
-          y="56242.852"
-          style="font-size: 5644.44461538px"
-        >
-          Ribeirão
-        </tspan>
-        <tspan
-          x="116517.47"
-          y="65062.297"
-          id="tspan7698"
-          style="font-size: 5644.44461538px"
-        >
-          Pires
-        </tspan>
-      </text>
-      <text
-        xml:space="preserve"
-        style="
-          font-size: 7055.55566406px;
-          font-style: normal;
-          font-weight: normal;
-          text-align: center;
-          line-height: 125%;
-          letter-spacing: 0px;
-          word-spacing: 0px;
-          text-anchor: middle;
-          fill: #000000;
-          fill-opacity: 1;
-          stroke: none;
-          font-family: Sans;
-        "
-        x="129620.63"
-        y="72369.836"
-        id="text7700"
-      >
-        <tspan
-          x="129620.63"
-          y="72369.836"
-          id="tspan7704"
-          style="font-size: 5644.44482422px"
-        >
-          Rio Grande
-        </tspan>
-        <tspan
-          x="129620.63"
-          y="79425.391"
-          style="font-size: 5644.44482422px"
-          id="tspan7710"
-        >
-          da Serra
-        </tspan>
-      </text>
+      <!-- Textos dos nomes das regiões -->
+      <text x="10079.365" y="54428.566" id="text7670" class="region-name" style="font-size: 5644.44461538px">Diadema</text>
+      <text x="58152.625" y="95350.789" id="text7674" class="region-name" style="font-size: 5644.44461538px">São Bernardo</text>
+      <text x="58152.625" y="105934.12" id="tspan7678" class="region-name" style="font-size: 5644.44461538px">do Campo</text>
+      <text x="45689.777" y="23720.102" id="text7680" class="region-name" style="font-size: 5644.44482422px">Mauá</text>
+      <text x="100958.77" y="39677.082" id="text7682" class="region-name" style="font-size: 5644.44482422px">São Caetano</text>
+      <text x="8958.5273" y="92028.895" id="text7686" class="region-name" style="font-size: 5644.44482422px">Santo André</text>
+      <text x="123986.95" y="86955.086" id="text7688" class="region-name" style="font-size: 5644.44482422px">Ribeirão Pires</text>
+      <text x="100958.77" y="144053.49" id="text7690" class="region-name" style="font-size: 5644.44482422px">Rio Grande</text>
+      <text x="100958.77" y="149664.8" id="tspan7694" class="region-name" style="font-size: 5644.44482422px">da Serra</text>
     </svg>
+    <script src="mapa.js"></script>
   </body>
 </html>
