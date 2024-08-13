@@ -1,80 +1,58 @@
-const dados = [
-    { id: 3547809, nome: "Santo André", total2022: 1091208312 },
-    { id: 3548708, nome: "São Bernardo do Campo", total2022: 1359006794 },
-    { id: 3548807, nome: "São Caetano do Sul", total2022: 496477143.94 },
-    { id: 3513801, nome: "Diadema", total2022: 368709175.6 },
-    { id: 3529401, nome: "Mauá", total2022: 289068120.4 },
-    { id: 3543303, nome: "Ribeirão Pires", total2022: 102698064.6 },
-    { id: 3544103, nome: "Rio Grande da Serra", total2022: 10334254.31 },
-  ];
+// Dados de exemplo para impostos arrecadados por região (em reais)
+const taxData = {
+    "mun_3513801": 500000,
+    "mun_3529401": 750000,
+    "mun_3543303": 600000,
+    "mun_3544103": 800000,
+    "mun_3547809": 900000,
+    "mun_3548708": 450000,
+    "mun_3548807": 650000
+  };
   
-  const formatador = new Intl.NumberFormat("pt-BR", {
-    style: "currency",
-    currency: "BRL",
-  });
-  
-  // Define a escala de cores
+  // Função para configurar a escala de cores
   const colorScale = d3.scaleSequential()
-    .domain([0, d3.max(dados, d => d.total2022)])
+    .domain([d3.min(Object.values(taxData)), d3.max(Object.values(taxData))])
     .interpolator(d3.interpolateBlues);
   
-  // Seleciona o tooltip
-  const tooltip = d3.select(".tooltip");
-  const info = document.getElementById("info"); // Certifique-se de ter um elemento com ID 'info'
+  // Seleciona todos os elementos do mapa com a classe 'map-region' e coloca o movimento do mouse
+  const regions = d3.selectAll('.map-region');
   
-  function escondeDados() {
-    info.innerText = "…";
-  }
+  regions.on('mouseover', function(event, d) {
+    const region = d3.select(this);
+    const regionId = region.attr('id');
+    const taxValue = taxData[regionId] || 0;
   
-  function mostraDados(id) {
-    let dado = dados.find(dado => dado.id === parseInt(id));
-    if (dado) {
-      let mensagem = `${dado.nome} arrecadou ${formatador.format(dado.total2022)} em 2022`;
-      info.innerText = mensagem;
-    }
-  }
+    // Mostra o tooltip com o valor do imposto
+    const tooltip = d3.select('#tooltip');
+    tooltip.style('display', 'block')
+      .style('left', (event.pageX + 10) + 'px')
+      .style('top', (event.pageY - 28) + 'px')
+      .text(`Imposto Arrecadado: R$ ${taxValue.toLocaleString()}`);
   
-  // Seleciona os elementos do mapa e aplica a cor com base na escala de cores
-  d3.selectAll('.map-region')
-    .style('fill', d => {
-      const valor = dados.find(dado => dado.id === parseInt(d.id.replace("mun_", "")))?.total2022 || 0;
-      return colorScale(valor);
-    })
-    .on('mouseover', function(event, d) {
-      // Muda a cor da região quando o mouse passa sobre
-      d3.select(this).style('fill', 'blue');
-      
-      // Obtém o valor e a posição do mouse
-      const [x, y] = d3.pointer(event);
-      
-      // Mostra o tooltip com base no ID
-      let id = d.id.replace("mun_", "");
-      let dado = dados.find(dado => dado.id === parseInt(id));
-      if (dado) {
-        tooltip
-          .html(`${dado.nome} arrecadou ${formatador.format(dado.total2022)} em 2022`)
-          .style('left', `${x + 10}px`)
-          .style('top', `${y + 10}px`)
-          .style('opacity', 1); // Torna o tooltip visível
-      }
-    })
-    .on('mouseout', function(event, d) {
-      // Restaura a cor da região e esconde o tooltip
-      let valor = dados.find(dado => dado.id === parseInt(d.id.replace("mun_", "")))?.total2022 || 0;
-      d3.select(this).style('fill', colorScale(valor));
-      tooltip.style('opacity', 0); // Torna o tooltip invisível
-    });
+    region.style('opacity', 0.8);
   
-  // Adiciona eventos de mouseover e mouseout para os caminhos SVG (caso necessário)
-  const cidades = document.querySelectorAll("svg path");
+    // Destaca o nome da região correspondente
+    const regionName = d3.select(`#text${regionId.slice(-7)}`);
+    regionName.classed('highlight', true);
+  })
+  .on('mouseout', function() {
+    const region = d3.select(this);
   
-  for (let cidade of cidades) {
-    cidade.onmouseover = () => {
-      let id = cidade.id.replace("mun_", "");
-      mostraDados(id);
-    };
-    cidade.onmouseout = () => {
-      escondeDados();
-    };
-  }
+    // Oculta o tooltip
+    d3.select('#tooltip').style('display', 'none');
+  
+    // Restaura a opacidade da região
+    region.style('opacity', 1);
+  
+    // Remove o destaque do nome da região
+    const regionName = d3.select(`#text${region.attr('id').slice(-7)}`);
+    regionName.classed('highlight', false);
+  });
+  
+  // Define a cor das regiões com base nos valores de impostos arrecadados
+  regions.style('fill', function() {
+    const regionId = d3.select(this).attr('id');
+    const taxValue = taxData[regionId] || 0;
+    return colorScale(taxValue);
+  });
   
