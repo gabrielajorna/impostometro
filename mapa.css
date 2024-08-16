@@ -3,7 +3,7 @@
     text-align: center;
     padding: 10px;
     font: 12px sans-serif;
-    background: lightsteelblue;
+    background: lightgray;
     border: 0px;
     border-radius: 8px;
     pointer-events: none;
@@ -16,7 +16,7 @@
     margin-top: 20px;
   }
   
-  .region-name {
+  text {
     font-size: 14px;
     fill: #333;
     pointer-events: none; 
