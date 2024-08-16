@@ -11,8 +11,8 @@ const taxData = {
   
   // Função para configurar a escala de cores
   const colorScale = d3.scaleSequential()
-    .domain([d3.min(Object.values(taxData)), d3.max(Object.values(taxData))])
-    .interpolator(d3.interpolateBlues);
+    .domain([d3.min(Object.values(taxData))/2, d3.max(Object.values(taxData))])
+    .interpolator(d3.interpolateOranges);
   
   // Seleciona todos os elementos do mapa com a classe 'map-region' e coloca o movimento do mouse
   const regions = d3.selectAll('.map-region');
@@ -21,6 +21,7 @@ const taxData = {
     const region = d3.select(this);
     const regionId = region.attr('id');
     const taxValue = taxData[regionId] || 0;
+    
   
     // Mostra o tooltip com o valor do imposto
     const tooltip = d3.select('#tooltip');
