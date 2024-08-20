@@ -1,12 +1,12 @@
 // Dados fictícios para impostos arrecadados por região 
 const taxData = {
-    "mun_3513801": {nome:'Mauá', valor: 500000},
-    "mun_3529401": {nome:'São Bernardo do Campo', valor:750000},
-    "mun_3543303": {nome:'São Caetano do Sul', valor:600000},
-    "mun_3544103": {nome:'Santo André', valor:800000},
-    "mun_3547809": {nome:'Ribeirão Pires', valor:900000},
-    "mun_3548708": {nome:'Rio Grande da Serra', valor:450000},
-    "mun_3548807": {nome:'Diadema', valor:650000}
+  "mun_3513801": {nome:'Diadema', valor: 404315000},
+  "mun_3529401": {nome:'Mauá', valor:302342000},
+  "mun_3543303": {nome:'Ribeirão Pires', valor:118688000},
+  "mun_3544103": {nome:'Rio Grande da Serra', valor:13692603},
+  "mun_3547809": {nome:'Santo André', valor: 1199536000},
+  "mun_3548708": {nome:'São Bernardo do Campo', valor:1524500000},
+  "mun_3548807": {nome:'São Caetano do Sul', valor:590100000}
 };
   
   // Configurando escala de cores
